@@ -1,0 +1,30 @@
+<html>
+<head><title> Welcome form </title>
+<style>
+	* { font-size:40px; }
+	body { background-color:lightblue; }
+</style>
+<script>
+	function show()
+	{
+		event.preventDefault();
+		let name = document.getElementById("name");
+		let ans = document.getElementById("ans");
+		
+		let msg = "Good Evening " + name.value;
+		ans.innerHTML = msg;
+	}
+</script>
+</head>
+<body>
+<center>
+<h1> Welcome App </h1>
+<form onsubmit="show()">
+<input type="text" placeholder="Enter your Name " id="name"/>
+<br><br>
+<input type="submit"/>
+</form>
+<h1 id="ans"/>
+</center>
+</body>
+</html>
